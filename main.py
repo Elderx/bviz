@@ -12,6 +12,8 @@ SCREEN_W, SCREEN_H = 3840, 2160
 TCP_SERVER_HOST = "127.0.0.1"
 TCP_SERVER_PORT = 12345
 CONNECT_RETRY_INTERVAL = 2.0
+RADIUS = 5
+ALLOW_DRAW_TEXT = False
 
 enable_movement = False
 
@@ -79,7 +81,7 @@ def process_line(line: bytes):
     if line.startswith(b"NEW|"):
         text_part = line[4:].decode("utf-8", errors="ignore")
 
-        events.append(Event(text=text_part))
+        events.append(Event(text=text_part, radius=RADIUS, allow_draw_text=ALLOW_DRAW_TEXT))
         events_in_last_second += 1
         # print(f"DEBUG: Appended new event with text={text_part!r}. events size={len(events)}")
 

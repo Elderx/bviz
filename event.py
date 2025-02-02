@@ -6,6 +6,8 @@ from timer import Timer
 SCREEN_W = 3840
 SCREEN_H = 2160
 
+
+
 def wrap_text(text, max_chars_per_line=40):
     words = text.split()
     lines = []
@@ -23,9 +25,9 @@ def wrap_text(text, max_chars_per_line=40):
     return lines
 
 class Event:
-    def __init__(self, text=""):
+    def __init__(self, text="", radius=0, allow_draw_text=False):
         self.color = Color(0, 255, 0, 255)
-        self.radius = 10
+        self.radius = radius
         self.initial_pos = Vector2(
             get_random_value(self.radius, SCREEN_W - self.radius),
             get_random_value(self.radius, SCREEN_H - self.radius)
@@ -43,6 +45,7 @@ class Event:
         self.dead = False
 
         self.text = text
+        self.allow_draw_text = allow_draw_text
 
     def on_timer_end(self):
         self.destroy()
@@ -62,10 +65,14 @@ class Event:
         draw_circle_v(self.current_pos, self.radius, self.color)
 
         # If there's text, draw it below the circle with naive wrapping
-        if self.text:
-            lines = wrap_text(self.text, max_chars_per_line=40)
-            font_size = 20
-            y_offset = self.radius + 5
-            for line in lines:
-                draw_text(line, int(self.current_pos.x), int(self.current_pos.y + y_offset), font_size, RAYWHITE)
-                y_offset += font_size + 2
+
+        if self.allow_draw_text == True:    
+            if self.text:
+                lines = wrap_text(self.text, max_chars_per_line=40)
+                font_size = 20
+                y_offset = self.radius + 5
+                for line in lines:
+                    draw_text(line, int(self.current_pos.x), int(self.current_pos.y + y_offset), font_size, RAYWHITE)
+                    y_offset += font_size + 2
+        else:
+            pass
