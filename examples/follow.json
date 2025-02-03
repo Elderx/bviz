@@ -1,0 +1,19 @@
+---> wss://jetstream2.us-east.bsky.network/subscribe\?wantedCollections=app.bsky.graph.follow
+
+{
+    "did": "did:plc:xx",
+    "time_us": 1738541373211043,
+    "kind": "commit",
+    "commit": {
+      "rev": "xxx",
+      "operation": "create",
+      "collection": "app.bsky.graph.follow",
+      "rkey": "xxx",
+      "record": {
+        "$type": "app.bsky.graph.follow",
+        "createdAt": "2025-02-03T00:09:32.952Z",
+        "subject": "did:plc:xxx"
+      },
+      "cid": "xxx"
+    }
+  }

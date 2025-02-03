@@ -1,0 +1,22 @@
+---> wss://jetstream2.us-east.bsky.network/subscribe\?wantedCollections=app.bsky.feed.like
+
+{
+  "did": "did:plc:xxx",
+  "time_us": 1738541156439119,
+  "kind": "commit",
+  "commit": {
+    "rev": "xxx",
+    "operation": "create",
+    "collection": "app.bsky.feed.like",
+    "rkey": "xxx",
+    "record": {
+      "$type": "app.bsky.feed.like",
+      "createdAt": "2025-02-03T00:05:56.420Z",
+      "subject": {
+        "cid": "xxx",
+        "uri": "at://did:plc:xxx/app.bsky.feed.post/xxx"
+      }
+    },
+    "cid": "xxx"
+  }
+}

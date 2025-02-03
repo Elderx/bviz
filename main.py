@@ -84,6 +84,7 @@ def process_line(line: bytes):
         events.append(Event(text=text_part, radius=RADIUS, allow_draw_text=ALLOW_DRAW_TEXT))
         events_in_last_second += 1
         # print(f"DEBUG: Appended new event with text={text_part!r}. events size={len(events)}")
+        print(f"DEBUG: Appended new event with text={text_part!r}. events size={len(events)}")
 
     elif line == b"NEW":
         # A bare 'NEW' with no text

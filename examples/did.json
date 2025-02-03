@@ -1,0 +1,42 @@
+---> websocat wss://jetstream2.us-east.bsky.network/subscribe\?wantedDids=did:plc:XXX
+
+{
+    "did": "did:plc:XXX",
+    "time_us": 1738543073247163,
+    "kind": "commit",
+    "commit": {
+      "rev": "XXX",
+      "operation": "create",
+      "collection": "app.bsky.feed.like",
+      "rkey": "XXX",
+      "record": {
+        "$type": "app.bsky.feed.like",
+        "createdAt": "2025-02-03T00:37:52.247Z",
+        "subject": {
+          "cid": "XXX",
+          "uri": "at://did:plc:XXX/app.bsky.feed.post/XXX"
+        }
+      },
+      "cid": "XXX"
+    }
+  }
+
+---> or for examnple
+
+  {
+    "did": "did:plc:XXX",
+    "time_us": 1738543084712179,
+    "kind": "commit",
+    "commit": {
+      "rev": "XXX",
+      "operation": "create",
+      "collection": "app.bsky.graph.follow",
+      "rkey": "XXX",
+      "record": {
+        "$type": "app.bsky.graph.follow",
+        "createdAt": "2025-02-03T00:38:03.799Z",
+        "subject": "did:plc:XXX"
+      },
+      "cid": "XXX"
+    }
+  }

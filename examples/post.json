@@ -1,0 +1,53 @@
+---> wss://jetstream2.us-east.bsky.network/subscribe\?wantedCollections=app.bsky.feed.post
+
+{
+    "did": "did:plc:XXX",
+    "time_us": 1738540928035135,
+    "kind": "commit",
+    "commit": {
+      "rev": "XXX",
+      "operation": "create",
+      "collection": "app.bsky.feed.post",
+      "rkey": "XXX",
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2025-02-03T00:02:06.262Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "XXX",
+              "aspectRatio": {
+                "height": 182,
+                "width": 300
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "XXX"
+                },
+                "mimeType": "image/jpeg",
+                "size": 48919
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "parent": {
+            "cid": "XXX",
+            "uri": "at://did:plc:XXX/app.bsky.feed.post/XXX"
+          },
+          "root": {
+            "cid": "XXX",
+            "uri": "at://did:plc:XXX/app.bsky.feed.post/XXX"
+          }
+        },
+        "text": ""
+      },
+      "cid": "XXX"
+    }
+  }
+  
